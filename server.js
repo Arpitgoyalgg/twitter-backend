@@ -9,10 +9,19 @@ const init = async () => {
 
     server.route({
         method: 'GET',
-        path:'/hello',
+        path:'/tweets',
         handler: (request, h) => {
     
-          return 'Hello World!';
+          return 'Endpoint to retrieve all the existing tweets';
+        }
+    });
+
+    server.route({
+        method: ['POST'],
+        path:'/tweet',
+        handler: (request, h) => {
+    
+          return 'Endpoint to POST a new tweet to the backend database';
         }
     });
 
